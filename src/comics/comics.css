@@ -1,0 +1,30 @@
+/* .custom-card-content {
+    position: relative;
+    padding-left: 10px; 
+  }
+  
+  .custom-card-content:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px; 
+    height: 50%;
+    background-color: black; 
+  }
+  
+  
+  .custom-card-content:after {
+    content: "";
+    position: absolute;
+    right: 4px; 
+    top: 0;
+    width: 5px; 
+    height: 100%;
+    background-color: blue; 
+    
+  } */
+
+  
+  
+  

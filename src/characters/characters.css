@@ -1,0 +1,30 @@
+.custom-card-content {
+    position: relative;
+    padding-left: 20px; /* Espacio para las líneas rojas */
+  }
+  
+  .custom-card-content:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho de la franja negra */
+    height: 100%;
+    background-color: red; /* Color de la franja negra */
+  }
+  
+  
+  .custom-card-content:after {
+    content: "";
+    position: absolute;
+    right: 4px; /* Ancho de la franja negra */
+    top: 0;
+    width: 5px; /* Ancho de las líneas rojas */
+    height: 100%;
+    background-color: black; /* Color de las líneas rojas */
+    
+  }
+
+  
+  
+  

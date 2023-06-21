@@ -1,0 +1,16 @@
+.marvel { 
+    
+    
+    animation: zoomOut 9s ease-in-out infinite;
+    -webkit-animation: zoomOut 9s ease-in-out infinite;
+    margin: auto auto;
+    
+    color: #fff; 
+    width: 570px; 
+    
+    font-size: 50px; 
+    line-height: .80;
+    font-family: "Benton Sans Ex Comp Bla", sans-serif; }
+
+
+    
