@@ -19,7 +19,11 @@ export const ComicScreen = () => {
 
   const [resultados, setResultados] = useState([]);
   const [personajes, setPersonajes] = useState([]);
-  const [id, setId] = useState(82967)
+  const [id, setId] = useState({
+    name: '',
+    imagen: '',
+    characters: []
+  });
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -33,7 +37,12 @@ export const ComicScreen = () => {
   } 
   const handleShow = (e) =>{
     
-    setId(e.target.value)
+    const filtro = resultados.filter((res) => res.id == e.target.value) 
+    setId({
+      imagen: filtro[0].thumbnail,
+      characters: filtro[0].characters,
+      name: filtro[0].title
+    })
     setShow(true);
   } 
 

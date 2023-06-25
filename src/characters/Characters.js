@@ -12,7 +12,11 @@ import "../main/main.css";
 export const Characters = () => {
   const { filteredCharacters } = useMarvelContext();
 
-  const [id, setId] = useState(1011334);
+  const [id, setId] = useState({
+    name: '',
+    imagen: '',
+    peliculas: []
+  });
   const [resultados, setResultados] = useState([]);
   const [show, setShow] = useState(false);
 
@@ -24,7 +28,13 @@ export const Characters = () => {
     setShow(false);
   };
   const handleShow = (e) => {
-    setId(e.target.value);
+   // setId(e.target.value);
+    const filtro = resultados.filter((res) => res.id == e.target.value) 
+    setId({
+      name: filtro[0].name,
+      peliculas: filtro[0].stories.items,
+      imagen: filtro[0].thumbnail
+    })
     setShow(true);
   };
 
@@ -45,7 +55,6 @@ export const Characters = () => {
                   <Card.Title style={{ color: "white" }}>
                     {pers.name}
                   </Card.Title>
-                  {/* <Card.Title type={'date'} value={pers.dates[0].date}> publisehd: {pers.dates[0].date}</Card.Title> */}
                   <Card.Text style={{ color: "white" }}>
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
